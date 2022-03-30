@@ -7,18 +7,14 @@
 # Inherit from RMX2061 device
 $(call inherit-product, device/realme/RMX2061/device.mk)
 
-# Bootanimation Resolution
+# Inherit some common xdCAF stuff
+$(call inherit-product,vendor/xdroid/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-WITH_GMS := true
-
-# Official-ify
-DERP_BUILDTYPE := Official
-
-# Inherit some common stuff
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+XDROID_BOOT_DARK := true
+XDROID_UI_BLUR := true
 
 # Device identifier
-PRODUCT_NAME := derp_RMX2061
+PRODUCT_NAME := xdroid_RMX2061
 PRODUCT_DEVICE := RMX2061
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := Realme 6 Pro
